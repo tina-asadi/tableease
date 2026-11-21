@@ -1,0 +1,16 @@
+# Python / Django
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+db.sqlite3
+*.sqlite3
+.env
+# Node / build output
+node_modules/
+prototype/app.js
+dist/
+# OS and editor
+.DS_Store
+.vscode/
+.idea/
