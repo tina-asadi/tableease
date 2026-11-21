@@ -1,0 +1,49 @@
+/* Dark is the default look. Light values are applied for light systems and for the toggle. */
+:root{
+  color-scheme:dark;
+  --bg:#0E0B0A; --surface:#17120F; --ink:#F4EBDD; --muted:#A99C8C; --line:#2F2721; --beige:#221A15;
+  --accent:#d9774f; --on-accent:#1A0E09; --accent-soft:#3A2218; --gold:#d8b873;
+  --green:#7fae86; --green-soft:#1D3024; --green-text:#a9cdb0;
+  --burgundy:#E58A98; --burg-soft:#3E1F27;
+  --amber:#E5B64F; --amber-soft:#3B2F14; --amber-text:#F0CD82;
+  --grey:#8A7F74; --grey-soft:#2B2420; --taken:#241D19; --on-fill:#1A0E09; --bar:#9C7B63;
+  --fx:rgba(255,255,255,.04); --fx2:rgba(255,255,255,.12); --zline:rgba(255,255,255,.1); --zl:#8a7a66;
+  --deep:#120d0b; --deep2:#1b1511; --panel-a:#1d1612; --panel-b:#15100d;
+  --pl-a:#17110d; --pl-b:#130d0a; --wood:#34251a; --chairbase:#241a14; --taken-c:#5b4e44; --taken-chair:#221913; --taken-shape:#1e1611;
+  --pcart-a:#2a1d14; --pcart-b:#120d0a; --lf-a:#3a2f2b; --lf-b:#2d2421; --tshadow:0 1px 2px #000;
+  --gm:55%; --glow:#8f3d2e; --bezel-a:#262019; --bezel-b:#0f0c0a; --stmt:#6f655b; --toast-bg:#F4EBDD; --toast-ink:#0E0B0A;
+  --display:'Fraunces',Georgia,'Times New Roman',serif; --body:'Manrope',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){
+  color-scheme:light;
+  --bg:#F6F0E6; --surface:#FFFBF4; --ink:#241b15; --muted:#6a5c50; --line:#e0d3bf; --beige:#efe5d2;
+  --accent:#b94a26; --on-accent:#ffffff; --accent-soft:#f6dccf; --gold:#7d5f17;
+  --green:#3f7a4f; --green-soft:#dcebd9; --green-text:#2c5a3a;
+  --burgundy:#8a2a3b; --burg-soft:#f1d6db;
+  --amber:#946212; --amber-soft:#f5e6c6; --amber-text:#6F4A0B;
+  --grey:#6F655C; --grey-soft:#e8e0d2; --taken:#e2d6c3; --on-fill:#ffffff; --bar:#8a6a52;
+  --fx:rgba(60,35,15,.05); --fx2:rgba(60,35,15,.16); --zline:rgba(60,35,15,.16); --zl:#7d6c58;
+  --deep:#efe4d1; --deep2:#f6ecdb; --panel-a:#fffaf0; --panel-b:#f7eddc;
+  --pl-a:#e8d9c0; --pl-b:#dfcdb0; --wood:#9a7451; --chairbase:#6b4f3a; --taken-c:#a8957f; --taken-chair:#cdb99f; --taken-shape:#d6c4aa;
+  --pcart-a:#f3e6d0; --pcart-b:#e4d2b5; --lf-a:#d9c9b2; --lf-b:#cdbca3; --tshadow:0 1px 1px rgba(255,255,255,.6);
+  --gm:45%; --glow:#e7b08f; --bezel-a:#efe3cf; --bezel-b:#d8c7ab; --stmt:#7f7064; --toast-bg:#241b15; --toast-ink:#F6F0E6}}
+:root[data-theme="light"]{
+  color-scheme:light;
+  --bg:#F6F0E6; --surface:#FFFBF4; --ink:#241b15; --muted:#6a5c50; --line:#e0d3bf; --beige:#efe5d2;
+  --accent:#b94a26; --on-accent:#ffffff; --accent-soft:#f6dccf; --gold:#7d5f17;
+  --green:#3f7a4f; --green-soft:#dcebd9; --green-text:#2c5a3a;
+  --burgundy:#8a2a3b; --burg-soft:#f1d6db;
+  --amber:#946212; --amber-soft:#f5e6c6; --amber-text:#6F4A0B;
+  --grey:#6F655C; --grey-soft:#e8e0d2; --taken:#e2d6c3; --on-fill:#ffffff; --bar:#8a6a52;
+  --fx:rgba(60,35,15,.05); --fx2:rgba(60,35,15,.16); --zline:rgba(60,35,15,.16); --zl:#7d6c58;
+  --deep:#efe4d1; --deep2:#f6ecdb; --panel-a:#fffaf0; --panel-b:#f7eddc;
+  --pl-a:#e8d9c0; --pl-b:#dfcdb0; --wood:#9a7451; --chairbase:#6b4f3a; --taken-c:#a8957f; --taken-chair:#cdb99f; --taken-shape:#d6c4aa;
+  --pcart-a:#f3e6d0; --pcart-b:#e4d2b5; --lf-a:#d9c9b2; --lf-b:#cdbca3; --tshadow:0 1px 1px rgba(255,255,255,.6);
+  --gm:45%; --glow:#e7b08f; --bezel-a:#efe3cf; --bezel-b:#d8c7ab; --stmt:#7f7064; --toast-bg:#241b15; --toast-ink:#F6F0E6}
+@property --glow{syntax:'<color>';inherits:true;initial-value:#8f3d2e}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5;transition:background .4s,color .4s;
+  padding-block:16px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.15;margin:0;text-wrap:balance}
+#toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(16px + env(safe-area-inset-bottom,0px));background:var(--toast-bg);color:var(--toast-ink);padding:10px 18px;border-radius:999px;font-weight:600;max-width:calc(100% - 32px);text-align:center;z-index:20;box-shadow:0 8px 28px rgba(0,0,0,.4)}

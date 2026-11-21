@@ -1,0 +1,20 @@
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<filter id="food" x="-8%" y="-8%" width="116%" height="116%" color-interpolation-filters="sRGB">
+ <feTurbulence type="fractalNoise" baseFrequency=".045" numOctaves="3" seed="4" result="n"/>
+ <feDisplacementMap in="SourceGraphic" in2="n" scale="2" result="d"/>
+ <feGaussianBlur in="d" stdDeviation="2.2" result="b"/>
+ <feSpecularLighting in="b" surfaceScale="3" specularConstant=".5" specularExponent="24" lighting-color="#fff2dc" result="s"><fePointLight x="55" y="25" z="120"/></feSpecularLighting>
+ <feComposite in="s" in2="d" operator="in" result="sp"/>
+ <feDiffuseLighting in="b" surfaceScale="2.5" diffuseConstant=".9" lighting-color="#fff" result="df"><fePointLight x="80" y="30" z="230"/></feDiffuseLighting>
+ <feComposite in="d" in2="df" operator="arithmetic" k1="1.3" k2="0" k3="0" k4="0" result="lit"/>
+ <feComposite in="lit" in2="d" operator="in" result="lit2"/>
+ <feComposite in="lit2" in2="sp" operator="arithmetic" k2="1" k3=".55"/>
+</filter>
+<filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4"/></filter>
+<filter id="woodf" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".01 .24" numOctaves="3" seed="8" result="t"/><feColorMatrix in="t" type="matrix" values="0 0 0 0 .05 0 0 0 0 .03 0 0 0 0 .015 0 0 0 1.1 -.38" result="g"/><feComposite in="g" in2="SourceGraphic" operator="in" result="gi"/><feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="gi"/></feMerge></filter>
+<radialGradient id="woodg" cx="40%" cy="35%" r="80%"><stop offset="0" stop-color="#7a5434"/><stop offset="1" stop-color="#3f2c1c"/></radialGradient>
+<radialGradient id="plg" cx="38%" cy="32%" r="80%"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#cfc8ba"/></radialGradient>
+<linearGradient id="metal" x1="0" x2="1"><stop offset="0" stop-color="#8d8a85"/><stop offset=".45" stop-color="#f4f1ea"/><stop offset="1" stop-color="#8a8680"/></linearGradient>
+<radialGradient id="flame" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ffd58a" stop-opacity=".75"/><stop offset="1" stop-color="#ffb347" stop-opacity="0"/></radialGradient>
+<radialGradient id="leather" cx="50%" cy="30%" r="80%"><stop offset="0" stop-color="#3b2d25"/><stop offset="1" stop-color="#1c1410"/></radialGradient>
+</defs></svg>

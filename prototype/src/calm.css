@@ -1,0 +1,33 @@
+/* Calm pass: flat surfaces, one accent colour, no glows, textures or decorative motion */
+.hero{background:var(--surface)!important}
+.hero::before,.cf-glow,.pedestal{display:none!important}
+.cta{background:var(--surface)!important}
+.mi.pop{background:var(--surface)}
+.partywrap{background:var(--surface)!important;min-height:0}
+.partycard{box-shadow:none!important;border-color:var(--line)!important}
+.pstep output{color:var(--accent)!important}
+.wobble{animation:none!important}
+.pc-art{background:var(--deep)!important}
+.panel{background:var(--surface)!important}
+.floor{background:var(--deep)!important}
+.zone{stroke-dasharray:none;stroke:var(--line)}
+.tb .shape{filter:drop-shadow(0 2px 3px rgba(0,0,0,.25))!important}
+.tb.taken .shape{filter:none!important}
+.tb.sel .halo{animation:none!important;opacity:0}
+.tb.pref .halo{stroke:var(--accent);stroke-dasharray:none;opacity:.7}
+.cf-bezel,.plate{box-shadow:none!important}
+.plate{filter:none!important}
+.tl-seg .lq{--sc:color-mix(in srgb,var(--accent) 22%,var(--surface))}
+.tl-seg .lm{--sc:color-mix(in srgb,var(--accent) 50%,var(--surface))}
+.tl-seg .lb{--sc:color-mix(in srgb,var(--accent) 82%,var(--surface))}
+.tl-seg div{color:var(--ink)!important}
+.tl-seg .lb{color:var(--on-accent)!important}
+.day .heat{background:var(--accent);opacity:calc(.15 + var(--hv,.5)*.85)}
+.pf[aria-pressed="true"]{border-color:var(--accent);color:var(--accent);background:transparent}
+.kicker,.pair b{color:var(--muted)!important}
+.kicker::before,.kicker::after,.copy .kicker::before{background:var(--muted)!important}
+.lvl-quiet,.lvl-moderate,.lvl-busy,.st-confirmed,.st-pending,.st-seated{background:var(--fx);color:var(--ink)}
+.legend i[style*="--green"]{background:var(--muted)!important}
+.tb{--c:var(--muted)}.tb.best,.tb.sel{--c:var(--accent)}
+.tb.res{--c:var(--accent)}.tb.free{--c:var(--muted)}
+.cbtn.ok{background:var(--ink);color:var(--bg)}.cbtn.ok .cic{background:var(--accent)}
